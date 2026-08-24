@@ -14,17 +14,21 @@ const topics = {
             "A água é um dos recursos mais importantes para a agricultura. O uso consciente busca reduzir desperdícios e melhorar a eficiência da irrigação.",
 
         boxes: [
+
             {
                 title: "Como fazer?",
+
                 text:
-                    "Utilizar sistemas de irrigação mais eficientes, monitorar a necessidade de água das culturas, evitar desperdícios e proteger áreas próximas a rios e nascentes."
+                    "Utilizar sistemas de irrigação mais eficientes, acompanhar a necessidade de água das culturas, evitar desperdícios e proteger áreas próximas a rios e nascentes."
             },
 
             {
                 title: "Por que é importante?",
+
                 text:
                     "A agricultura depende da disponibilidade de água. Melhorar sua utilização ajuda a preservar os recursos hídricos e manter a produção agrícola."
             }
+
         ]
 
     },
@@ -40,17 +44,21 @@ const topics = {
             "A produção agrícola precisa estar relacionada à conservação do meio ambiente. Preservar florestas, rios, nascentes e o solo ajuda a manter o equilíbrio dos ecossistemas.",
 
         boxes: [
+
             {
                 title: "Como fazer?",
+
                 text:
                     "Preservar áreas de vegetação, proteger nascentes, conservar o solo e utilizar práticas agrícolas que reduzam erosão e degradação ambiental."
             },
 
             {
                 title: "Benefício",
+
                 text:
                     "A conservação dos recursos naturais contribui para a manutenção da produtividade agrícola e dos serviços oferecidos pelos ecossistemas."
             }
+
         ]
 
     },
@@ -66,17 +74,21 @@ const topics = {
             "A rotação de culturas consiste em alternar diferentes espécies vegetais em uma mesma área ao longo das safras.",
 
         boxes: [
+
             {
                 title: "Exemplo",
+
                 text:
                     "Uma área pode receber uma cultura em uma safra e outra espécie na safra seguinte, de acordo com o planejamento agrícola."
             },
 
             {
                 title: "Benefícios",
+
                 text:
-                    "A rotação pode melhorar características do solo, contribuir para o controle de pragas e doenças, aumentar a matéria orgânica e proteger o solo contra erosão."
+                    "A rotação pode contribuir para melhorar características do solo, controlar pragas e doenças, aumentar a matéria orgânica e proteger o solo contra erosão."
             }
+
         ]
 
     },
@@ -92,17 +104,21 @@ const topics = {
             "A sustentabilidade também envolve diminuir o desperdício e encontrar formas de reaproveitar resíduos gerados nas atividades agrícolas e agroindustriais.",
 
         boxes: [
+
             {
                 title: "Como fazer?",
+
                 text:
                     "Separar materiais, reutilizar recursos quando possível, reduzir perdas durante a produção e buscar alternativas para o aproveitamento de resíduos orgânicos."
             },
 
             {
                 title: "Uma possibilidade",
+
                 text:
                     "Alguns resíduos de atividades agropecuárias podem ser utilizados na produção de energia, fertilizantes ou outros produtos."
             }
+
         ]
 
     },
@@ -115,20 +131,24 @@ const topics = {
         title: "Proteção da biodiversidade",
 
         description:
-            "A biodiversidade inclui a variedade de plantas, animais e outros organismos presentes nos ecossistemas. Ela possui papel importante no equilíbrio ambiental e na própria produção agrícola.",
+            "A biodiversidade inclui a variedade de plantas, animais e outros organismos presentes nos ecossistemas. Ela possui papel importante no equilíbrio ambiental e na produção agrícola.",
 
         boxes: [
+
             {
                 title: "Como proteger?",
+
                 text:
                     "Conservar áreas naturais, proteger habitats, manter a diversidade de espécies e adotar práticas que diminuam impactos sobre os ecossistemas."
             },
 
             {
                 title: "Por que importa?",
+
                 text:
-                    "A biodiversidade está relacionada a diversos serviços ecossistêmicos importantes para a agricultura, como polinização, ciclagem de nutrientes e equilíbrio dos ecossistemas."
+                    "A biodiversidade está relacionada a serviços ecossistêmicos importantes para a agricultura, como polinização, ciclagem de nutrientes e equilíbrio dos ecossistemas."
             }
+
         ]
 
     },
@@ -144,17 +164,21 @@ const topics = {
             "Fontes renováveis podem contribuir para uma agricultura mais sustentável. Entre elas estão a energia solar, eólica, hidráulica e a energia obtida a partir de biomassa.",
 
         boxes: [
+
             {
                 title: "Exemplos",
+
                 text:
                     "A energia solar pode ser utilizada em propriedades rurais, enquanto resíduos de atividades agropecuárias podem ser aproveitados em processos de geração de energia."
             },
 
             {
                 title: "Benefício",
+
                 text:
                     "O uso de fontes renováveis pode diminuir a dependência de combustíveis fósseis e aproveitar recursos disponíveis na própria atividade agrícola."
             }
+
         ]
 
     }
@@ -163,16 +187,19 @@ const topics = {
 
 
 // ========================================
-// ELEMENTOS DOS TÓPICOS
+// FUNCIONAMENTO DOS CARDS
 // ========================================
 
 const cards = document.querySelectorAll(".card");
 
-const topicInfo = document.getElementById("topic-info");
+const topicInfo =
+    document.getElementById("topic-info");
 
-const topicIcon = document.getElementById("topic-icon");
+const topicIcon =
+    document.getElementById("topic-icon");
 
-const topicTitle = document.getElementById("topic-title");
+const topicTitle =
+    document.getElementById("topic-title");
 
 const topicDescription =
     document.getElementById("topic-description");
@@ -184,25 +211,26 @@ const closeTopic =
     document.getElementById("close-topic");
 
 
-// ========================================
-// CLICAR NOS CARDS
-// ========================================
-
 cards.forEach(card => {
 
     card.addEventListener("click", () => {
 
-        const topicName = card.dataset.topic;
+        const topicName =
+            card.dataset.topic;
 
-        const topic = topics[topicName];
+        const topic =
+            topics[topicName];
 
         if (!topic) {
             return;
         }
 
-        topicIcon.textContent = topic.icon;
 
-        topicTitle.textContent = topic.title;
+        topicIcon.textContent =
+            topic.icon;
+
+        topicTitle.textContent =
+            topic.title;
 
         topicDescription.textContent =
             topic.description;
@@ -222,13 +250,15 @@ cards.forEach(card => {
             const title =
                 document.createElement("h4");
 
-            title.textContent = box.title;
+            title.textContent =
+                box.title;
 
 
             const text =
                 document.createElement("p");
 
-            text.textContent = box.text;
+            text.textContent =
+                box.text;
 
 
             boxElement.appendChild(title);
@@ -255,7 +285,7 @@ cards.forEach(card => {
 
 
 // ========================================
-// FECHAR INFORMAÇÃO
+// FECHAR TÓPICO
 // ========================================
 
 closeTopic.addEventListener("click", () => {
@@ -276,10 +306,15 @@ const questions = [
             "O que significa agricultura sustentável?",
 
         answers: [
+
             "Produzir o máximo possível sem considerar o meio ambiente.",
+
             "Produzir alimentos preservando recursos naturais e pensando nas futuras gerações.",
+
             "Parar completamente de utilizar tecnologia no campo.",
+
             "Utilizar apenas produtos químicos."
+
         ],
 
         correct: 1
@@ -291,10 +326,15 @@ const questions = [
             "Qual prática pode ajudar a reduzir o desperdício de água?",
 
         answers: [
+
             "Deixar a irrigação ligada o dia inteiro.",
+
             "Aumentar a quantidade de água utilizada.",
+
             "Utilizar sistemas de irrigação eficientes.",
+
             "Desperdiçar água durante a produção."
+
         ],
 
         correct: 2
@@ -306,10 +346,15 @@ const questions = [
             "O que é rotação de culturas?",
 
         answers: [
+
             "Plantar sempre a mesma cultura.",
+
             "Alternar diferentes culturas em uma mesma área.",
+
             "Parar de utilizar o solo.",
+
             "Retirar todas as plantas da propriedade."
+
         ],
 
         correct: 1
@@ -318,13 +363,18 @@ const questions = [
 
     {
         question:
-            "Qual destas atitudes contribui para a proteção da biodiversidade?",
+            "Qual atitude contribui para a proteção da biodiversidade?",
 
         answers: [
+
             "Destruir áreas naturais.",
+
             "Eliminar habitats.",
+
             "Preservar áreas naturais e diferentes espécies.",
+
             "Reduzir a diversidade de plantas."
+
         ],
 
         correct: 2
@@ -336,10 +386,15 @@ const questions = [
             "Qual é um exemplo de energia renovável que pode ser utilizada no campo?",
 
         answers: [
+
             "Carvão mineral.",
+
             "Petróleo.",
+
             "Energia solar.",
+
             "Gasolina."
+
         ],
 
         correct: 2
@@ -398,7 +453,8 @@ function startQuiz() {
 
     resultElement.classList.add("hidden");
 
-    scoreElement.textContent = "Pontos: 0";
+    scoreElement.textContent =
+        "Pontos: 0";
 
     showQuestion();
 
@@ -433,7 +489,8 @@ function showQuestion() {
         const button =
             document.createElement("button");
 
-        button.textContent = answer;
+        button.textContent =
+            answer;
 
         button.classList.add("answer");
 
@@ -560,7 +617,7 @@ function showResult() {
     } else {
 
         message =
-            "Continue aprendendo! Você pode revisar os tópicos do site e tentar novamente.";
+            "Continue aprendendo! Revise os tópicos do site e tente novamente.";
 
     }
 

@@ -67,16 +67,13 @@ header {
 .nav-links {
     display: flex;
     gap: 28px;
-
     list-style: none;
 }
 
 .nav-links a {
     color: #40543c;
-
     font-size: 14px;
     font-weight: 600;
-
     transition: 0.3s;
 }
 
@@ -96,10 +93,10 @@ header {
         linear-gradient(
             90deg,
             rgba(48, 76, 46, 0.96),
-            rgba(48, 76, 46, 0.76),
+            rgba(48, 76, 46, 0.72),
             rgba(48, 76, 46, 0.25)
         ),
-        url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1800&q=80");
+        url("imagens/agua.jpg");
 
     background-size: cover;
     background-position: center;
@@ -118,19 +115,14 @@ header {
 
 .small-title {
     font-size: 13px;
-
     letter-spacing: 2px;
-
     font-weight: 600;
-
     margin-bottom: 20px;
 }
 
 .hero h1 {
     font-size: clamp(40px, 6vw, 70px);
-
     line-height: 1.05;
-
     margin-bottom: 25px;
 }
 
@@ -140,18 +132,8 @@ header {
 
 .hero p:not(.small-title) {
     font-size: 18px;
-
     max-width: 600px;
-
     margin-bottom: 35px;
-}
-
-.hero-plant {
-    font-size: 180px;
-
-    margin-left: auto;
-
-    opacity: 0.9;
 }
 
 
@@ -163,11 +145,9 @@ header {
     display: inline-block;
 
     border: none;
-
     cursor: pointer;
 
     background: #c39a62;
-
     color: white;
 
     padding: 14px 25px;
@@ -175,7 +155,6 @@ header {
     border-radius: 8px;
 
     font-size: 14px;
-
     font-weight: 700;
 
     transition: 0.3s;
@@ -183,7 +162,6 @@ header {
 
 .btn:hover {
     background: #a57d4c;
-
     transform: translateY(-2px);
 }
 
@@ -194,33 +172,25 @@ header {
 
 .section {
     max-width: 1200px;
-
     margin: auto;
-
     padding: 90px 25px;
 }
 
 .section-title {
     text-align: center;
-
     margin-bottom: 55px;
 }
 
 .section-title p {
     color: #9a7045;
-
     font-size: 12px;
-
     font-weight: 700;
-
     letter-spacing: 2px;
-
     margin-bottom: 8px;
 }
 
 .section-title h2 {
     font-size: 36px;
-
     color: #304a30;
 }
 
@@ -234,11 +204,8 @@ header {
 
 .section-description {
     display: block;
-
     color: #6b7464;
-
     font-size: 14px;
-
     margin-top: 12px;
 }
 
@@ -253,17 +220,13 @@ header {
 
 .about {
     display: grid;
-
     grid-template-columns: 1.5fr 1fr;
-
     gap: 50px;
-
     align-items: center;
 }
 
 .about-text {
     font-size: 16px;
-
     color: #5b6555;
 }
 
@@ -273,23 +236,18 @@ header {
 
 .about-highlight {
     background: #e5dcc7;
-
     padding: 40px;
-
     border-radius: 15px;
-
     border-left: 6px solid #6f8f4d;
 }
 
 .highlight-icon {
     font-size: 45px;
-
     margin-bottom: 10px;
 }
 
 .about-highlight h3 {
     color: #385437;
-
     margin-bottom: 10px;
 }
 
@@ -300,24 +258,19 @@ header {
 
 .green-section {
     background: #3e5c3b;
-
     color: white;
 }
 
-.green-section > .section {
-    max-width: 1200px;
-}
-
-
-/* CARDS */
-
 .cards {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
-    gap: 22px;
+    gap: 25px;
 }
+
+
+/* ========================================
+   CARDS COM IMAGENS
+======================================== */
 
 .card {
     position: relative;
@@ -328,15 +281,17 @@ header {
 
     background: #fffdf7;
 
-    padding: 30px;
+    padding: 15px 15px 30px;
 
-    min-height: 230px;
+    min-height: 350px;
 
-    border-radius: 12px;
+    border-radius: 14px;
 
     cursor: pointer;
 
     color: #35452f;
+
+    overflow: hidden;
 
     border-bottom: 4px solid transparent;
 
@@ -348,23 +303,54 @@ header {
 
     border-bottom-color: #c39a62;
 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
 }
 
 .card:focus {
     outline: 3px solid #d6b778;
 }
 
-.card-icon {
-    font-size: 40px;
 
-    margin-bottom: 15px;
+/* IMAGEM */
+
+.card-image {
+    width: 100%;
+    height: 170px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    margin-bottom: 18px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+
+/* ÍCONE */
+
+.card-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
 }
 
 .card h3 {
     color: #385437;
 
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 
     font-size: 18px;
 }
@@ -378,9 +364,8 @@ header {
 .card-arrow {
     position: absolute;
 
-    bottom: 20px;
-
-    right: 25px;
+    bottom: 18px;
+    right: 22px;
 
     color: #9a7045;
 
@@ -391,7 +376,7 @@ header {
 
 
 /* ========================================
-   CAIXA DOS TÓPICOS
+   INFORMAÇÃO DOS TÓPICOS
 ======================================== */
 
 .topic-info {
@@ -453,7 +438,6 @@ header {
 
 .topic-big-icon {
     font-size: 50px;
-
     margin-bottom: 10px;
 }
 
@@ -489,13 +473,11 @@ header {
 
 .extra-box h4 {
     color: #6b5739;
-
     margin-bottom: 7px;
 }
 
 .extra-box p {
     color: #626b5e;
-
     font-size: 14px;
 }
 
@@ -520,13 +502,10 @@ header {
 
 .importance-number {
     width: 60px;
-
     height: 60px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     background: #d9c49a;
@@ -540,7 +519,6 @@ header {
 
 .importance h3 {
     color: #3c5738;
-
     margin-bottom: 5px;
 }
 
@@ -555,17 +533,14 @@ header {
 
 .numbers-section {
     background: #e5dcc7;
-
     padding: 70px 25px;
 }
 
 .numbers-container {
     max-width: 1100px;
-
     margin: auto;
 
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
@@ -587,13 +562,11 @@ header {
 
 .number-box h3 {
     color: #3c5738;
-
     margin: 10px 0;
 }
 
 .number-box p {
     color: #687064;
-
     font-size: 13px;
 }
 
@@ -637,7 +610,6 @@ header {
 
 .quiz-section {
     padding: 90px 25px;
-
     background: #f1ecdf;
 }
 
@@ -657,7 +629,6 @@ header {
 
 .quiz-header {
     display: flex;
-
     justify-content: space-between;
 
     color: #78905e;
@@ -707,19 +678,16 @@ header {
 
 .answer:hover {
     border-color: #8ba36d;
-
     background: #f3f6ec;
 }
 
 .answer.correct {
     background: #dcebd2;
-
     border-color: #5d8a4d;
 }
 
 .answer.wrong {
     background: #f3d7cf;
-
     border-color: #b75c4d;
 }
 
@@ -750,13 +718,11 @@ header {
 
 .result h2 {
     color: #385437;
-
     margin: 10px 0;
 }
 
 .result p {
     color: #657060;
-
     margin-bottom: 20px;
 }
 
@@ -814,10 +780,6 @@ footer p {
         padding: 70px 7%;
     }
 
-    .hero-plant {
-        display: none;
-    }
-
     .about {
         grid-template-columns: 1fr;
     }
@@ -845,7 +807,6 @@ footer p {
 
     .nav-links {
         flex-wrap: wrap;
-
         justify-content: center;
     }
 
