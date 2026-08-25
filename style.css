@@ -1,857 +1,291 @@
-/* ========================================
-   CONFIGURAÇÕES GERAIS
-======================================== */
+/* Palette de Cores Naturais:
+   - Verde Floresta: #2d5a27
+   - Verde Oliva: #4a6b32
+   - Marrom Terra: #5c3d2e
+   - Bege/Creme: #f4f1ea
+   - Bege Amarelado (Destaque): #e5ddc8
+   - Texto Escuro: #2b2b2b
+*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: #f7f3e9;
-    color: #35452f;
-    line-height: 1.6;
+  background-color: #f4f1ea;
+  color: #2b2b2b;
+  line-height: 1.6;
 }
 
-button {
-    font-family: inherit;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-/* ========================================
-   MENU
-======================================== */
-
-header {
-    background: #fffdf7;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    box-shadow: 0 2px 10px rgba(52, 69, 47, 0.10);
-}
-
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-
-    min-height: 75px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 25px;
-}
-
-.logo {
-    font-size: 21px;
-    font-weight: 700;
-    color: #365b38;
-}
-
-.logo span {
-    color: #9a7045;
-}
-
-.nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-}
-
-.nav-links a {
-    color: #40543c;
-    font-size: 14px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #789b54;
-}
-
-
-/* ========================================
-   HERO
-======================================== */
-
+/* Cabeçalho Hero */
 .hero {
-    min-height: 650px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(48, 76, 46, 0.96),
-            rgba(48, 76, 46, 0.72),
-            rgba(48, 76, 46, 0.25)
-        ),
-        url("assets/plantação.jpeg");
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    align-items: center;
-
-    padding: 80px 10%;
-
-    color: white;
-}
-
-.hero-content {
-    max-width: 680px;
-}
-
-.small-title {
-    font-size: 13px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    margin-bottom: 20px;
+  background-image: linear-gradient(rgba(45, 90, 39, 0.75), rgba(92, 61, 46, 0.75)), url('assets/plantação.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: #f4f1ea;
+  text-align: center;
+  padding: 5rem 1rem;
 }
 
 .hero h1 {
-    font-size: clamp(40px, 6vw, 70px);
-    line-height: 1.05;
-    margin-bottom: 25px;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.hero h1 span {
-    color: #d6b778;
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.hero p:not(.small-title) {
-    font-size: 18px;
-    max-width: 600px;
-    margin-bottom: 35px;
+/* Menu de Navegação */
+.navbar {
+  background-color: #2d5a27;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-
-/* ========================================
-   BOTÕES
-======================================== */
-
-.btn {
-    display: inline-block;
-
-    border: none;
-    cursor: pointer;
-
-    background: #c39a62;
-    color: white;
-
-    padding: 14px 25px;
-
-    border-radius: 8px;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    transition: 0.3s;
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
 }
 
-.btn:hover {
-    background: #a57d4c;
-    transform: translateY(-2px);
+.navbar a {
+  color: #f4f1ea;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  display: block;
+  font-weight: 600;
+  transition: background-color 0.3s;
 }
 
+.navbar a:hover {
+  background-color: #4a6b32;
+}
 
-/* ========================================
-   SEÇÕES
-======================================== */
+/* Conteúdo */
+.main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
 
 .section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 90px 25px;
+  margin-bottom: 4rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(92, 61, 46, 0.08);
+  border-left: 6px solid #4a6b32;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 55px;
+.section-header {
+  margin-bottom: 1.5rem;
 }
 
-.section-title p {
-    color: #9a7045;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
+.section-header h2 {
+  color: #2d5a27;
+  font-size: 1.8rem;
 }
 
-.section-title h2 {
-    font-size: 36px;
-    color: #304a30;
+.section-header .line {
+  height: 3px;
+  width: 60px;
+  background-color: #5c3d2e;
+  margin-top: 0.5rem;
 }
 
-.section-title.light p {
-    color: #d9c18c;
+/* Grids e Layouts */
+.grid-2col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
 }
 
-.section-title.light h2 {
-    color: white;
+.text-block {
+  flex: 1 1 300px;
 }
 
-.section-description {
-    display: block;
-    color: #6b7464;
-    font-size: 14px;
-    margin-top: 12px;
+.text-block p {
+  margin-bottom: 1rem;
 }
 
-.light .section-description {
-    color: #dfe8d7;
+.img-wrapper {
+  flex: 1 1 300px;
+  text-align: center;
 }
 
-
-/* ========================================
-   SOBRE
-======================================== */
-
-.about {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 50px;
-    align-items: center;
+.img-wrapper img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #e5ddc8;
 }
 
-.about-text {
-    font-size: 16px;
-    color: #5b6555;
+.caption {
+  font-size: 0.85rem;
+  color: #5c3d2e;
+  font-style: italic;
+  display: block;
+  margin-top: 0.5rem;
 }
 
-.about-text p {
-    margin-bottom: 20px;
+/* Cards de Práticas */
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
-
-.about-highlight {
-    background: #e5dcc7;
-    padding: 40px;
-    border-radius: 15px;
-    border-left: 6px solid #6f8f4d;
-}
-
-.highlight-icon {
-    font-size: 45px;
-    margin-bottom: 10px;
-}
-
-.about-highlight h3 {
-    color: #385437;
-    margin-bottom: 10px;
-}
-
-
-/* ========================================
-   PRÁTICAS
-======================================== */
-
-.green-section {
-    background: #3e5c3b;
-    color: white;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-
-/* ========================================
-   CARDS
-======================================== */
 
 .card {
-    position: relative;
-
-    text-align: left;
-
-    border: none;
-
-    background: #fffdf7;
-
-    padding: 15px 15px 30px;
-
-    min-height: 350px;
-
-    border-radius: 14px;
-
-    cursor: pointer;
-
-    color: #35452f;
-
-    overflow: hidden;
-
-    border-bottom: 4px solid transparent;
-
-    transition: 0.3s;
+  background-color: #f4f1ea;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 1 1 calc(50% - 1.5rem);
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5ddc8;
+  transition: transform 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-
-    border-bottom-color: #c39a62;
-
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+  transform: translateY(-4px);
 }
 
-.card:focus {
-    outline: 3px solid #d6b778;
+.full-width-card {
+  flex: 1 1 100%;
 }
 
-
-/* ========================================
-   IMAGENS DOS CARDS
-======================================== */
-
-.card-image {
-    width: 100%;
-    height: 170px;
-
-    overflow: hidden;
-
-    border-radius: 10px;
-
-    margin-bottom: 18px;
+.card-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-.card-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.5s ease;
+.card-body {
+  padding: 1.2rem;
 }
 
-.card:hover .card-image img {
-    transform: scale(1.08);
+.card-body h3 {
+  color: #5c3d2e;
+  margin-bottom: 0.5rem;
 }
 
-
-/* ========================================
-   ÍCONES DOS CARDS
-======================================== */
-
-.card-icon {
-    font-size: 30px;
-    margin-bottom: 8px;
-}
-
-.card h3 {
-    color: #385437;
-
-    margin-bottom: 7px;
-
-    font-size: 18px;
-}
-
-.card p {
-    color: #7a8373;
-
-    font-size: 13px;
-}
-
-.card-arrow {
-    position: absolute;
-
-    bottom: 18px;
-    right: 22px;
-
-    color: #9a7045;
-
-    font-size: 22px;
-
-    font-weight: bold;
-}
-
-
-/* ========================================
-   INFORMAÇÕES DOS TÓPICOS
-======================================== */
-
-.topic-info {
-    position: relative;
-
-    background: #fffdf7;
-
-    color: #35452f;
-
-    margin-top: 35px;
-
-    padding: 40px;
-
-    border-radius: 15px;
-
-    border-left: 6px solid #c39a62;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-
-    display: none;
-
-    animation: topicAppear 0.4s ease;
-}
-
-.topic-info.active {
-    display: block;
-}
-
-@keyframes topicAppear {
-
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-.close-topic {
-    position: absolute;
-
-    right: 20px;
-    top: 15px;
-
-    border: none;
-
-    background: transparent;
-
-    color: #52634d;
-
-    font-size: 30px;
-
-    cursor: pointer;
-}
-
-.topic-big-icon {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-.topic-info h2 {
-    color: #385437;
-
-    margin-bottom: 15px;
-
-    font-size: 28px;
-}
-
-.topic-info > p {
-    color: #606b5d;
-
-    margin-bottom: 25px;
-}
-
-.topic-extra {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
-}
-
-.extra-box {
-    background: #f0eadc;
-
-    padding: 20px;
-
-    border-radius: 10px;
-}
-
-.extra-box h4 {
-    color: #6b5739;
-    margin-bottom: 7px;
-}
-
-.extra-box p {
-    color: #626b5e;
-    font-size: 14px;
-}
-
-
-/* ========================================
-   IMPORTÂNCIA
-======================================== */
-
-.importance {
-    display: grid;
-
-    grid-template-columns: 80px 1fr;
-
-    column-gap: 25px;
-
-    row-gap: 35px;
-
-    max-width: 900px;
-
-    margin: auto;
-}
-
-.importance-number {
-    width: 60px;
-    height: 60px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #d9c49a;
-
-    color: #40543c;
-
-    border-radius: 50%;
-
-    font-weight: 700;
-}
-
-.importance h3 {
-    color: #3c5738;
-    margin-bottom: 5px;
-}
-
-.importance p {
-    color: #687064;
-}
-
-
-/* ========================================
-   DESTAQUES
-======================================== */
-
-.numbers-section {
-    background: #e5dcc7;
-    padding: 70px 25px;
-}
-
-.numbers-container {
-    max-width: 1100px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-.number-box {
-    text-align: center;
-
-    background: #f9f6ed;
-
-    padding: 30px 20px;
-
-    border-radius: 12px;
-}
-
-.number-box span {
-    font-size: 40px;
-}
-
-.number-box h3 {
-    color: #3c5738;
-    margin: 10px 0;
-}
-
-.number-box p {
-    color: #687064;
-    font-size: 13px;
-}
-
-
-/* ========================================
-   FRASE
-======================================== */
-
-.quote {
-    background: #d8c49b;
-
-    text-align: center;
-
-    padding: 80px 25px;
-
-    color: #35452f;
-}
-
-.quote span {
-    font-size: 45px;
-}
-
-.quote h2 {
-    max-width: 800px;
-
-    margin: 15px auto;
-
-    font-size: 35px;
-
-    line-height: 1.3;
-}
-
-.quote p {
-    font-size: 15px;
-}
-
-
-/* ========================================
-   QUIZ
-======================================== */
-
+/* Quiz Style */
 .quiz-section {
-    padding: 90px 25px;
-    background: #f1ecdf;
+  background-color: #e5ddc8;
+  border-left-color: #5c3d2e;
 }
 
 .quiz-container {
-    max-width: 700px;
-
-    margin: auto;
-
-    background: white;
-
-    padding: 40px;
-
-    border-radius: 15px;
-
-    box-shadow: 0 10px 30px rgba(50, 70, 45, 0.1);
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.quiz-header {
-    display: flex;
-    justify-content: space-between;
-
-    color: #78905e;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    margin-bottom: 25px;
+.quiz-progress {
+  font-size: 0.9rem;
+  color: #5c3d2e;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-#question {
-    color: #354c35;
-
-    font-size: 22px;
-
-    margin-bottom: 25px;
+#question-text {
+  color: #2d5a27;
+  margin-bottom: 1.2rem;
 }
 
-.answers {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 12px;
+.options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-.answer {
-    width: 100%;
-
-    text-align: left;
-
-    padding: 15px;
-
-    border: 2px solid #ded9ca;
-
-    border-radius: 8px;
-
-    background: #fffdf7;
-
-    cursor: pointer;
-
-    color: #465543;
-
-    transition: 0.2s;
+.option-btn {
+  background-color: #f4f1ea;
+  border: 2px solid #4a6b32;
+  color: #2b2b2b;
+  padding: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  transition: all 0.2s;
 }
 
-.answer:hover {
-    border-color: #8ba36d;
-    background: #f3f6ec;
-}
-
-.answer.correct {
-    background: #dcebd2;
-    border-color: #5d8a4d;
-}
-
-.answer.wrong {
-    background: #f3d7cf;
-    border-color: #b75c4d;
-}
-
-.answer:disabled {
-    cursor: not-allowed;
-}
-
-.quiz-btn {
-    margin-top: 25px;
+.option-btn:hover {
+  background-color: #4a6b32;
+  color: white;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-
-/* ========================================
-   RESULTADO DO QUIZ
-======================================== */
-
-.result {
-    text-align: center;
+.btn {
+  background-color: #2d5a27;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
 }
 
-.result-icon {
-    font-size: 60px;
+.btn:hover {
+  background-color: #4a6b32;
 }
 
-.result h2 {
-    color: #385437;
-    margin: 10px 0;
+/* Referências */
+.references-list {
+  list-style-type: square;
+  padding-left: 1.5rem;
 }
 
-.result p {
-    color: #657060;
-    margin-bottom: 20px;
+.references-list li {
+  margin-bottom: 1rem;
+  color: #444;
 }
 
-
-/* ========================================
-   RODAPÉ
-======================================== */
-
+/* Rodapé */
 footer {
-    background: #263c28;
+  background-color: #5c3d2e;
+  color: #f4f1ea;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
 
-    color: white;
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
 
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .navbar ul {
+    flex-direction: column;
     text-align: center;
-
-    padding: 45px 20px;
-}
-
-.footer-logo {
-    font-size: 22px;
-
-    font-weight: 700;
-
-    margin-bottom: 8px;
-}
-
-footer p {
-    font-size: 14px;
-}
-
-.copyright {
-    margin-top: 20px;
-
-    opacity: 0.7;
-
-    font-size: 12px;
-}
-
-
-/* ========================================
-   CELULAR / TABLET
-======================================== */
-
-@media (max-width: 900px) {
-
-    .nav-links {
-        gap: 12px;
-    }
-
-    .nav-links a {
-        font-size: 11px;
-    }
-
-    .hero {
-        padding: 70px 7%;
-    }
-
-    .about {
-        grid-template-columns: 1fr;
-    }
-
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .numbers-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .navbar {
-        flex-direction: column;
-
-        padding: 15px;
-
-        gap: 12px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero {
-        min-height: 600px;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .hero p:not(.small-title) {
-        font-size: 15px;
-    }
-
-    .section-title h2 {
-        font-size: 28px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .topic-extra {
-        grid-template-columns: 1fr;
-    }
-
-    .numbers-container {
-        grid-template-columns: 1fr;
-    }
-
-    .importance {
-        grid-template-columns: 60px 1fr;
-    }
-
-    .quiz-container {
-        padding: 25px;
-    }
-
-    .quote h2 {
-        font-size: 26px;
-    }
-
+  }
 }
